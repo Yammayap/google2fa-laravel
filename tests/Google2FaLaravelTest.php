@@ -190,7 +190,7 @@ class Google2FaLaravelTest extends TestCase
 
         $authenticator->login();
 
-        $this->assertTrue($request->getSession()->get('google2fa.auth_passed'));
+        $this->assertTrue($request->session()->get('google2fa.auth_passed'));
     }
 
     public function testOldPasswords()
